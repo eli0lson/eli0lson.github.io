@@ -23,10 +23,20 @@
   font-size: calc(10px + 2vmin);
   color: white;
   font-family: 'Courier New';
+  font-weight:bold;
 }
 
-.App-link {
+.link {
   color: #61dafb;
+  padding: 12px;
+  font-size: 0.85em;
+  
+}
+
+.links {
+  display: flex;
+  margin: 0 2px;
+  justify-content: space-around;
 }
 
 @keyframes App-logo-spin {

@@ -7,17 +7,26 @@ function App() {
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-        🤪 <code>Ryan Drew <strike>eli olson</strike> .com</code>
+          <code>eli olson .com</code>
         </p>
-        [ under construction ]
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+        <div className="links">
+          <a
+            className="spotify-link link"
+            href="https://open.spotify.com/artist/0kXiWZgWKpdl8lYsZKelUW?si=vXt8P_t4RkG3iBlcp6f6Sw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            spotify
+          </a>
+          <a
+            className="apple-music-link link"
+            href="https://music.apple.com/us/artist/eli-olson/1509498872"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            apple music
+          </a>
+        </div>
       </header>
     </div>
   );
