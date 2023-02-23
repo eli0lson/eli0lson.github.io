@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -14,29 +14,57 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content:flex-start; */
   font-size: calc(10px + 2vmin);
   color: white;
   font-family: 'Courier New';
   font-weight:bold;
+  /* padding: 1em; */
+}
+
+.App-body {
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+}
+
+.navItem {
+  padding: .8em 1.75em .25em 1em !important;
+}
+
+.custom-btn {
+  /* padding: .67em !important; */
+  display: flex !important;
+  margin-right: 2.5em;
+  background-color: rgb(49, 114, 194);
+  border-color: rgb(49, 114, 194);
 }
 
 .link {
-  color: #61dafb;
-  padding: 12px;
-  font-size: 0.85em;
-  
+  /* color: #61dafb; */
+  /* padding: 12em; */
+  font-size: .7em;
 }
 
 .links {
   display: flex;
+  flex-direction: row;
   margin: 0 2px;
-  justify-content: space-around;
+  justify-content: right;
+}
+
+.mynav {
+  padding: 0;
+}
+
+img {
+  height: 48.35rem;
+  padding: 2em;
 }
 
 @keyframes App-logo-spin {
