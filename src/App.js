@@ -41,6 +41,9 @@ function App() {
         <img src={heart_flower} alt="heart flower"></img>
         <img src={eli_mustache} alt="eli mustache"></img>
       </body>
+      <footer className="App-footer">
+        <p></p>
+      </footer>
     </div>
   );
 }
