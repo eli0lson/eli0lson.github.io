@@ -35,15 +35,11 @@ function App() {
             </Button>
           </div>
         </Navbar>
-        {/* <img src={heart_flower} alt="heart flower"></img> */}
       </header>
       <body className='App-body'>
-        <img src={heart_flower} alt="heart flower"></img>
-        <img src={eli_mustache} alt="eli mustache"></img>
+        {/* <img src={heart_flower} alt="heart flower"></img> */}
+        <p className='body-text'>WIP, come back soon :)</p>
       </body>
-      <footer className="App-footer">
-        <p></p>
-      </footer>
     </div>
   );
 }
