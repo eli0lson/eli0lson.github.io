@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expanding Circle Animation</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* margin: 0; 
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); */
+    }
+
+    .circle-container {
+      position: relative;
+      display: inline-block;
+      /* width: 200px;
+      height: 200px;
+      overflow: hidden; */
+    }
+
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: #333;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .circle.expand {
+      width: 400px;
+      height: 400px;
+      opacity: 1;
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .text.reveal {
+      opacity: 1;
+    }
+
+    .button-container {
+      position: relative;
+    }
+
+    .button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 0px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: opacity 0.5s ease-in-out;
+      transition: visibility 2s linear;
+    }
+
+    .button.hide {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle-container">
+      <div class="circle"></div>
+      <div class="text">Hello, world!</div>
+    </div>
+    <div class="button-container">
+      <button class="button" onclick="revealText()">Click to reveal</button>
+    </div>
+  </div>
+
+  <script>
+    function revealText() {
+      var circle = document.querySelector('.circle');
+      var text = document.querySelector('.text');
+      var button = document.querySelector('.button')
+
+      circle.classList.add('expand');
+      text.classList.add('reveal');
+      button.classList.add('hide')
+    }
+  </script>
+</body>
+</html>
