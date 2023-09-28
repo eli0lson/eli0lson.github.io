@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.acf75525.css",
-    "main.js": "/static/js/main.020d664e.js",
-    "static/media/eli_mustache.jpg": "/static/media/eli_mustache.bc742757cf08d65e6668.jpg",
-    "static/media/heart_flower.jpg": "/static/media/heart_flower.e0a8ac4a7c203f00e88b.jpg",
+    "main.css": "/static/css/main.0a62fc20.css",
+    "main.js": "/static/js/main.f3829b4b.js",
     "index.html": "/index.html",
-    "main.acf75525.css.map": "/static/css/main.acf75525.css.map",
-    "main.020d664e.js.map": "/static/js/main.020d664e.js.map"
+    "main.0a62fc20.css.map": "/static/css/main.0a62fc20.css.map",
+    "main.f3829b4b.js.map": "/static/js/main.f3829b4b.js.map"
   },
   "entrypoints": [
-    "static/css/main.acf75525.css",
-    "static/js/main.020d664e.js"
+    "static/css/main.0a62fc20.css",
+    "static/js/main.f3829b4b.js"
   ]
 }
