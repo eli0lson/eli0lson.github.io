@@ -27,7 +27,7 @@ const Body = () => {
             direction="column"
             alignItems="center"
             justifyContent="center"
-            sx={{ minHeight: '90vh' }}
+            sx={{ minHeight: '90vh', backgroundColor: "#faeffc" }}
             >
             <ThemeProvider theme={theme}>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>

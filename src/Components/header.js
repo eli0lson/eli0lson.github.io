@@ -20,9 +20,7 @@ const Header = () => {
   return (
     <Box>
       <ThemeProvider theme={theme} >
-          <AppBar 
-            position="static">
-
+          <AppBar position="relative" elevation={3}>
               <Box sx={{ width: "20%", justifyContent: "center", display: "flex"}}>
                 <Typography sx={{ 
                   fontSize: "29px"
