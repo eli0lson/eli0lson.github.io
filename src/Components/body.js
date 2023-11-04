@@ -1,7 +1,11 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react';
+// import Button from 'react-bootstrap/Button';
+import { Button, ThemeProvider, Grid } from '@mui/material';
+import { Box } from '@mui/system';
 
-import './body.css'
+import theme from './themes';
+
+// import './body.css'
 
 const Body = () => {
 
@@ -17,12 +21,29 @@ const Body = () => {
 
     return (
     <div className='body'>
-        <Button
-            className={'nothing-yet custom-btn' + className()}
-            href="#"
-            onClick={() => setGone(!gone)}>
-            if u click me i'll disappear :/
-        </Button>
+        <Grid
+            container
+            spacing={0}
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+            sx={{ minHeight: '90vh' }}
+            >
+            <ThemeProvider theme={theme}>
+                <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <Button
+                        variant="outlined"
+                        href="#"
+                        onClick={() => setGone(!gone)}
+                        sx={{
+                            opacity: gone ? 0 : 1,
+                            transition: "opacity 0.5s ease-in, background-color 0.2s ease-in",
+                            }}>
+                        if u click me i'll disappear :/
+                    </Button>
+                </Box>
+            </ThemeProvider>
+        </Grid>
     </div>
     )
 }
