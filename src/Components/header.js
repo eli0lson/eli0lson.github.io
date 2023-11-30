@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { 
   Typography,
-  Button, 
   AppBar,
   ThemeProvider,
  } from '@mui/material';
@@ -12,9 +11,6 @@ import theme from './themes'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.css';
-
-const SPOTIFY_LINK = "https://open.spotify.com/artist/0kXiWZgWKpdl8lYsZKelUW?si=vXt8P_t4RkG3iBlcp6f6Sw";
-const APPLE_MUSIC_LINK = "https://music.apple.com/us/artist/eli-olson/1509498872";
 
 const Header = () => {
   return (
@@ -28,7 +24,7 @@ const Header = () => {
                   eli olson .com
                 </Typography>
               </Box>
-
+{/* 
               <Box sx={{ width: "25%", display: "flex", justifyContent: "space-around" }}>
                 <Button
                   variant="outlined"
@@ -44,7 +40,7 @@ const Header = () => {
                   target="_blank">
                     apple music
                 </Button>
-              </Box>
+              </Box> */}
 
           </AppBar>
         </ThemeProvider>

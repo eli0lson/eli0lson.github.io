@@ -4,7 +4,8 @@ const theme = createTheme({
     typography: {
         fontFamily: 'Courier New',
         textTransform: 'none',
-        fontSize: 19,
+        fontSize: 25,
+        fontWeight: "bold"
     },
     box: {
         display: "flex",
@@ -16,14 +17,7 @@ const theme = createTheme({
                 root: {
                     textTransform: 'none',
                     height: "2.2em",
-                    color: "black",
-                    backgroundColor: "#cee8ff",
-                    borderColor: "#5f9cd2",
-                    ":hover": { 
-                        backgroundColor: "#5f9cd2",
-                        color: "white",
-                        borderColor: "white"
-                    }
+                    color: "black"
                 }
             },
             defaultProps: {
@@ -34,10 +28,8 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     display: "flex",
-                    flexDirection: "column",
-                    minHeight: "10vh",
-                    display: "flex",
                     flexDirection: "row",
+                    minHeight: "10vh",
                     backgroundColor: "#413c63",
                     alignItems: "center"
                 }
