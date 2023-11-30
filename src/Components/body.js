@@ -94,6 +94,7 @@ const Body = () => {
                                 <Button
                                     variant="outlined"
                                     target="_blank"
+                                    onClick={() => window.open("https://github.com/eli0lson", "_blank")}
                                     sx={{ ...musicButtonStyles, opacity: expandCode ? 1 : 0 }}>
                                     github
                                 </Button>
