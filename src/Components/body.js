@@ -81,9 +81,11 @@ const Body = () => {
                         <Typography>?</Typography>
                         </Box>
 
-                        <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "flex-end", marginTop: "1em"}}>
+                        <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-around", marginTop: "1em"}}>
 
-                            <Box sx={{ marginRight: "10.9em" }}>
+                            <Box sx={{ width: "21%" }} />
+
+                            <Box >
                                 {/* <Button
                                     variant="outlined"
                                     target="_blank"
@@ -100,7 +102,7 @@ const Body = () => {
                                 </Button>
                             </Box>
 
-                            <Box sx={{ marginRight: "1.68em" }} >
+                            <Box >
                                 <Button
                                     variant="outlined"
                                     href={SPOTIFY_LINK}
