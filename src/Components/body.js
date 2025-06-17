@@ -4,6 +4,8 @@ import { Box } from '@mui/system';
 
 import theme from './themes';
 
+import './body2.css';
+
 const SPOTIFY_LINK = "https://open.spotify.com/artist/0kXiWZgWKpdl8lYsZKelUW?si=vXt8P_t4RkG3iBlcp6f6Sw";
 const APPLE_MUSIC_LINK = "https://music.apple.com/us/artist/eli-olson/1509498872";
 
@@ -20,7 +22,6 @@ const Body = () => {
             color: "white",
             textDecoration: "underline"
         },
-        marginLeft: "1em",
         transition: "opacity 0.5s ease-in, background-color 0.2s ease-in",
     }
 
@@ -40,59 +41,28 @@ const Body = () => {
                             display: "flex", 
                             flexDirection: "row", 
                             justifyContent: "center", 
-                            alignItems: "center"
+                            alignItems: "center",
+                            minWidth: "74rem",
+                            marginLeft: "3.3rem"
                             }}>
                             <Typography>are you here to see</Typography>
-                            <Button
-                                variant="text"
-                                onClick={() => {
-                                    setExpandCode(!expandCode)
-                                }}
-                                sx={{
-                                    color: expandCode ? "#413c63" : "#426dd4",
-                                    marginLeft: ".5em",
-                                    marginRight: ".5em",
-                                    textDecoration: `${expandCode ? "underline" : "none"}`,
-                                    ":hover": {
-                                        background: "none",
-                                        textDecoration: "underline"
-                                    }
-                                }}>
-                                my code
-                            </Button>
-                            <Typography>or to listen to</Typography>
-                            <Button
-                                variant="text"
-                                onClick={() => {
-                                    setExpandMusic(!expandMusic)
-                                }}
-                                sx={{
-                                    color: expandMusic ? "#413c63" : "#426dd4",
-                                    marginLeft: ".5em",
-                                    marginRight: ".5em",
-                                    textDecoration: `${expandMusic ? "underline" : "none"}`,
-                                    ":hover": {
-                                        background: "none",
-                                        textDecoration: "underline"
-                                    }
-                                }}>
-                                my music
-                            </Button>
-                        <Typography>?</Typography>
-                        </Box>
-
-                        <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-around", marginTop: "1em"}}>
-
-                            <Box sx={{ width: "21%" }} />
-
-                            <Box >
-                                {/* <Button
-                                    variant="outlined"
-                                    target="_blank"
-                                    sx={{ ...musicButtonStyles, opacity: expandCode ? 1 : 0 }}
-                                    onClick={() => window.open("/../../public/Olson_Resume.pdf","_blank")}>
-                                    <a href="/../../public/Olson_Resume.pdf" target="_blank">résumé</a>
-                                </Button> */}
+                            <div class='links'>
+                                <Button 
+                                    className='toggle'
+                                    variant="text"
+                                    onClick={() => {
+                                        setExpandCode(!expandCode)
+                                    }}
+                                    sx={{
+                                        color: expandCode ? "#413c63" : "#426dd4",
+                                        textDecoration: `${expandCode ? "underline" : "none"}`,
+                                        ":hover": {
+                                            background: "none",
+                                            textDecoration: "underline"
+                                        }
+                                    }}>
+                                    my code
+                                </Button>
                                 <Button
                                     variant="outlined"
                                     target="_blank"
@@ -100,23 +70,57 @@ const Body = () => {
                                     sx={{ ...musicButtonStyles, opacity: expandCode ? 1 : 0 }}>
                                     github
                                 </Button>
-                            </Box>
+                            </div>
+                            <Typography>or to listen to</Typography>
+                            <div class='links'>
+                                <div className='toggle'>
+                                    <Button
+                                        className='toggle'
+                                        variant="text"
+                                        onClick={() => {
+                                            setExpandMusic(!expandMusic)
+                                        }}
+                                        sx={{
+                                            color: expandMusic ? "#413c63" : "#426dd4",
+                                            textDecoration: `${expandMusic ? "underline" : "none"}`,
+                                            ":hover": {
+                                                background: "none",
+                                                textDecoration: "underline"
+                                            }
+                                        }}>
+                                        my music
+                                    </Button>
+                                    <Typography>?</Typography>
+                                </div>
+                                <div className='music-links'>
+                                    <Button
+                                        className='music-link'
+                                        variant="outlined"
+                                        href={SPOTIFY_LINK}
+                                        target="_blank"
+                                        sx={{ ...musicButtonStyles, opacity: expandMusic ? 1 : 0 }}>
+                                        spotify
+                                    </Button>
+                                    <Button
+                                        className='music-link'
+                                        variant="outlined"
+                                        href={APPLE_MUSIC_LINK}
+                                        target="_blank"
+                                        sx={{ ...musicButtonStyles, opacity: expandMusic ? 1 : 0 }}>
+                                        apple music
+                                    </Button>
+                                </div>
+                            </div>
+                        </Box>
+
+                        <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-around", marginTop: "1em"}}>
+
+                            <Box sx={{ width: "21%" }} />
+
+                            
 
                             <Box >
-                                <Button
-                                    variant="outlined"
-                                    href={SPOTIFY_LINK}
-                                    target="_blank"
-                                    sx={{ ...musicButtonStyles, opacity: expandMusic ? 1 : 0 }}>
-                                    spotify
-                                </Button>
-                                <Button
-                                    variant="outlined"
-                                    href={APPLE_MUSIC_LINK}
-                                    target="_blank"
-                                    sx={{ ...musicButtonStyles, opacity: expandMusic ? 1 : 0 }}>
-                                    apple music
-                                </Button>
+                                
                             </Box>
                         </Box>
                     </Box>

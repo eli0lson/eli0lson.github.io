@@ -1,0 +1,29 @@
+
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.5rem;
+}
+
+.music-links {
+    flex-direction: row;
+    margin-left: -4rem;
+}
+
+.music-link {
+    margin-right: 1rem;
+}
+
+.toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.7rem;
+}
+
+.toggle:hover {
+    background-color: "none";
+    text-decoration: "underline"
+}
