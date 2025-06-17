@@ -43,39 +43,52 @@ const Body = () => {
                             justifyContent: "center", 
                             alignItems: "center",
                             minWidth: "74rem",
-                            marginLeft: "3.3rem"
+                            marginLeft: "3.5rem"
                             }}>
                             <Typography>are you here to see</Typography>
-                            <div class='links'>
-                                <Button 
-                                    className='toggle'
-                                    variant="text"
-                                    onClick={() => {
-                                        setExpandCode(!expandCode)
-                                    }}
-                                    sx={{
-                                        color: expandCode ? "#413c63" : "#426dd4",
-                                        textDecoration: `${expandCode ? "underline" : "none"}`,
-                                        ":hover": {
-                                            background: "none",
-                                            textDecoration: "underline"
-                                        }
-                                    }}>
-                                    my code
-                                </Button>
-                                <Button
-                                    variant="outlined"
-                                    target="_blank"
-                                    onClick={() => window.open("https://github.com/eli0lson", "_blank")}
-                                    sx={{ ...musicButtonStyles, opacity: expandCode ? 1 : 0 }}>
-                                    github
-                                </Button>
+                            <div class='links code'>
+                                <div className='toggle'>
+                                    <Button 
+                                        className='toggle-button'
+                                        variant="text"
+                                        onClick={() => {
+                                            setExpandCode(!expandCode)
+                                        }}
+                                        sx={{
+                                            color: expandCode ? "#413c63" : "#426dd4",
+                                            textDecoration: `${expandCode ? "underline" : "none"}`,
+                                            ":hover": {
+                                                background: "none",
+                                                textDecoration: "underline"
+                                            },
+                                        }}>
+                                        my code
+                                    </Button>
+                                </div>
+                                <div className='code-links'>
+                                    <Button
+                                        className='link'
+                                        variant="outlined"
+                                        target="_blank"
+                                        onClick={() => window.open("https://olsynth-six.vercel.app/", "_blank")}
+                                        sx={{ ...musicButtonStyles, opacity: expandCode ? 1 : 0 }}>
+                                        olsynth
+                                    </Button>
+                                    <Button
+                                        className='link'
+                                        variant="outlined"
+                                        target="_blank"
+                                        onClick={() => window.open("https://github.com/eli0lson", "_blank")}
+                                        sx={{ ...musicButtonStyles, opacity: expandCode ? 1 : 0 }}>
+                                        github
+                                    </Button>
+                                </div>
                             </div>
                             <Typography>or to listen to</Typography>
                             <div class='links'>
                                 <div className='toggle'>
                                     <Button
-                                        className='toggle'
+                                        className='toggle-button'
                                         variant="text"
                                         onClick={() => {
                                             setExpandMusic(!expandMusic)
@@ -94,7 +107,7 @@ const Body = () => {
                                 </div>
                                 <div className='music-links'>
                                     <Button
-                                        className='music-link'
+                                        className='link'
                                         variant="outlined"
                                         href={SPOTIFY_LINK}
                                         target="_blank"
@@ -102,7 +115,7 @@ const Body = () => {
                                         spotify
                                     </Button>
                                     <Button
-                                        className='music-link'
+                                        className='link'
                                         variant="outlined"
                                         href={APPLE_MUSIC_LINK}
                                         target="_blank"
@@ -111,17 +124,6 @@ const Body = () => {
                                     </Button>
                                 </div>
                             </div>
-                        </Box>
-
-                        <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-around", marginTop: "1em"}}>
-
-                            <Box sx={{ width: "21%" }} />
-
-                            
-
-                            <Box >
-                                
-                            </Box>
                         </Box>
                     </Box>
                 </ThemeProvider>
