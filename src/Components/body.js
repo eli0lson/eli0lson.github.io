@@ -33,18 +33,24 @@ const Body = () => {
                 direction="column"
                 alignItems="center"
                 justifyContent="center"
-                sx={{ minHeight: '90vh', backgroundColor: "#faeffc" }}
+                sx={{ 
+                    minHeight: '90vh', 
+                    backgroundColor: "#faeffc",
+                 }}
             >
                 <ThemeProvider theme={theme}>
                     <Box sx={{ display: "flex", flexDirection: "column", width: "78.2%"}}>
-                        <Box sx={{ 
-                            display: "flex", 
-                            flexDirection: "row", 
-                            justifyContent: "center", 
-                            alignItems: "center",
-                            minWidth: "74rem",
-                            marginLeft: "3.5rem"
-                            }}>
+                        <Box 
+                            className='body-box'
+                            sx={{ 
+                                display: "flex", 
+                                flexDirection: "row", 
+                                justifyContent: "center", 
+                                alignItems: "center",
+                                minWidth: "74rem",
+                                marginLeft: "3.5rem",
+                                flexWrap: "wrap"
+                        }}>
                             <Typography>are you here to see</Typography>
                             <div class='links code'>
                                 <div className='toggle'>
@@ -103,7 +109,7 @@ const Body = () => {
                                         }}>
                                         my music
                                     </Button>
-                                    <Typography>?</Typography>
+                                    <Typography className='question'>?</Typography>
                                 </div>
                                 <div className='music-links'>
                                     <Button
