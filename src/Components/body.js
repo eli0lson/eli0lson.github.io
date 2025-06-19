@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Button, ThemeProvider, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
+import ToggleButton from './toggleButton.tsx'; 
+
 import theme from './themes';
 
 import './body2.css';
@@ -54,22 +56,11 @@ const Body = () => {
                             <Typography>are you here to see</Typography>
                             <div class='links code'>
                                 <div className='toggle'>
-                                    <Button 
-                                        className='toggle-button'
-                                        variant="text"
-                                        onClick={() => {
-                                            setExpandCode(!expandCode)
-                                        }}
-                                        sx={{
-                                            color: expandCode ? "#413c63" : "#426dd4",
-                                            textDecoration: `${expandCode ? "underline" : "none"}`,
-                                            ":hover": {
-                                                background: "none",
-                                                textDecoration: "underline"
-                                            },
-                                        }}>
-                                        my code
-                                    </Button>
+                                    <ToggleButton
+                                        setExpand={setExpandCode}
+                                        expand={expandCode}
+                                        label={'my code'}
+                                    />
                                 </div>
                                 <div className='code-links'>
                                     <Button
@@ -93,22 +84,11 @@ const Body = () => {
                             <Typography>or to listen to</Typography>
                             <div class='links'>
                                 <div className='toggle'>
-                                    <Button
-                                        className='toggle-button'
-                                        variant="text"
-                                        onClick={() => {
-                                            setExpandMusic(!expandMusic)
-                                        }}
-                                        sx={{
-                                            color: expandMusic ? "#413c63" : "#426dd4",
-                                            textDecoration: `${expandMusic ? "underline" : "none"}`,
-                                            ":hover": {
-                                                background: "none",
-                                                textDecoration: "underline"
-                                            }
-                                        }}>
-                                        my music
-                                    </Button>
+                                    <ToggleButton
+                                        expand={expandMusic}
+                                        setExpand={setExpandMusic}
+                                        label='my music'
+                                    />
                                     <Typography className='question'>?</Typography>
                                 </div>
                                 <div className='music-links'>

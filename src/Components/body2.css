@@ -23,20 +23,20 @@
     flex-direction: row;
     align-items: center;
     margin: .5rem;
-
-    .toggle-button {
-         font-size: 1.8rem;
-    }
 }
 
 .links.code {
-    margin-right: -4.6rem;
+  margin-right: -3rem;
+
+  .buttonBack {
+    width: 10rem !important;
+  }
 }
 
-.toggle:hover {
+/* .toggle:hover {
     background-color: "none";
     text-decoration: "underline"
-}
+} */
 
 @media only screen and (max-width: 428px) {
   .body-box {
@@ -94,7 +94,7 @@
 
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     .body-box {
         flex-direction: column !important;
         min-width: 0 !important;
