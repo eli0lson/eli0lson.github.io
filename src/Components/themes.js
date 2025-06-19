@@ -2,10 +2,10 @@ import { createTheme } from '@mui/material';
 
 const theme = createTheme({      
     typography: {
-        fontFamily: 'Courier New',
-        textTransform: 'none',
+        fontFamily: 'Courier',
+        // textTransform: 'none',
         fontSize: 25,
-        fontWeight: "bold"
+        fontWeight: 100
     },
     box: {
         display: "flex",
