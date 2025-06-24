@@ -1,0 +1,61 @@
+/* * {
+    box-sizing: border-box;  
+} */
+.top {
+    height: 90vh;
+    background-color: rgb(230, 239, 252); 
+}
+
+.keycap {
+    box-sizing: border-box;
+    background-color: rgb(140, 143, 153);
+    margin: .8rem;
+    height: 95.5%;
+
+    border: solid 1.5px white;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 100%;
+}
+
+.wrapper > div {
+    background-color: rgb(65, 74, 85);
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.middle {
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+}
+.buttons {
+    display: flex;
+    width: 100%;
+    margin: -1.6rem 0;
+}
+
+
+
+.circle {
+  background-color: rgb(231, 242, 255);
+  height: 10px;
+  width: 10px;
+  border: solid 0px black;
+  border-radius: 15px;
+  margin: 0 1rem;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.screen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './Components/header';
-import Body from './Components/body';
+import GridWrapper from './Components/gridWrapper.tsx';
 
 import './index.css';
 import './App.css';
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
-    <Body />
+    <GridWrapper />
   </React.StrictMode>
 );
 

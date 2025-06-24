@@ -1,32 +1,44 @@
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+  height: 68.5%;
+  /* margin-bottom: -3rem; */
+}
+
 .links {
     display: flex;
     flex-direction: column;
-    margin-top: 3.5rem;
     justify-content: center;
+    margin: 3rem 3rem;
 }
 
 .music-links {
     flex-direction: row;
-    margin-left: -4rem;
+    /* margin-left: -4rem; */
 }
 
 .code-links {
-    margin-left: -4rem;
+    /* margin-left: -4rem; */
 }
 
 .link {
-    margin-right: 1rem !important;
+    /* margin-right: 1rem !important; */
+    margin: 0 1rem !important;
 }
 
 .toggle {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
-    margin: .5rem;
+    justify-content: center !important;
+    margin: .5rem .5rem 1.5rem;
+
 }
 
 .links.code {
-  margin-right: -3rem;
+  margin-left: 4.5rem;
 
   .buttonBack {
     width: 10rem !important;

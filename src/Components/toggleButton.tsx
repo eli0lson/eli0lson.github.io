@@ -7,6 +7,7 @@ type ToggleProps = {
     expand: boolean;
     setExpand: (val: boolean) => void;
     label: string;
+    id: string;
 }
 
 const ToggleButton = (props: ToggleProps) => {
@@ -14,14 +15,16 @@ const ToggleButton = (props: ToggleProps) => {
     const {
         expand,
         setExpand,
-        label
+        label,
+        id
     } = props;
 
     return (
         <div className={`buttonBack ${expand ? 'clicked' : ''}`}
             onClick={() => {
                 setExpand(!expand)
-            }}>
+            }}
+            id={id}>
             <div className='cover'></div>
             <Button 
                 className={`toggleButton ${expand ? 'clicked' : ''}`}

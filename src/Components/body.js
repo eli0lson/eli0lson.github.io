@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Button, ThemeProvider, Grid, Typography } from '@mui/material';
-import { Box } from '@mui/system';
+import { Button, ThemeProvider } from '@mui/material';
 
 import ToggleButton from './toggleButton.tsx'; 
 
@@ -29,91 +28,79 @@ const Body = () => {
 
     return (
         <div className='body'>
-            <Grid
-                container
-                spacing={0}
-                direction="column"
-                alignItems="center"
-                justifyContent="center"
-                sx={{ 
-                    minHeight: '90vh', 
-                    backgroundColor: "#faeffc",
-                 }}
-            >
-                <ThemeProvider theme={theme}>
-                    <Box sx={{ display: "flex", flexDirection: "column", width: "78.2%"}}>
-                        <Box 
-                            className='body-box'
+            <ThemeProvider theme={theme}>
+                <div className='links code'>
+                    <div className='toggle'>
+                        <ToggleButton
+                            setExpand={setExpandCode}
+                            expand={expandCode}
+                            label={'my code'}
+                        />
+                    </div>
+                    <div className='code-links'>
+                        <Button
+                            className='link'
+                            variant="outlined"
+                            target="_blank"
+                            onClick={() => window.open("https://olsynth-six.vercel.app/", "_blank")}
                             sx={{ 
-                                display: "flex", 
-                                flexDirection: "row", 
-                                justifyContent: "center", 
-                                alignItems: "center",
-                                minWidth: "74rem",
-                                marginLeft: "3.5rem",
-                                flexWrap: "wrap"
-                        }}>
-                            <Typography>are you here to see</Typography>
-                            <div class='links code'>
-                                <div className='toggle'>
-                                    <ToggleButton
-                                        setExpand={setExpandCode}
-                                        expand={expandCode}
-                                        label={'my code'}
-                                    />
-                                </div>
-                                <div className='code-links'>
-                                    <Button
-                                        className='link'
-                                        variant="outlined"
-                                        target="_blank"
-                                        onClick={() => window.open("https://olsynth-six.vercel.app/", "_blank")}
-                                        sx={{ ...musicButtonStyles, opacity: expandCode ? 1 : 0 }}>
-                                        olsynth
-                                    </Button>
-                                    <Button
-                                        className='link'
-                                        variant="outlined"
-                                        target="_blank"
-                                        onClick={() => window.open("https://github.com/eli0lson", "_blank")}
-                                        sx={{ ...musicButtonStyles, opacity: expandCode ? 1 : 0 }}>
-                                        github
-                                    </Button>
-                                </div>
-                            </div>
-                            <Typography>or to listen to</Typography>
-                            <div class='links'>
-                                <div className='toggle'>
-                                    <ToggleButton
-                                        expand={expandMusic}
-                                        setExpand={setExpandMusic}
-                                        label='my music'
-                                    />
-                                    <Typography className='question'>?</Typography>
-                                </div>
-                                <div className='music-links'>
-                                    <Button
-                                        className='link'
-                                        variant="outlined"
-                                        href={SPOTIFY_LINK}
-                                        target="_blank"
-                                        sx={{ ...musicButtonStyles, opacity: expandMusic ? 1 : 0 }}>
-                                        spotify
-                                    </Button>
-                                    <Button
-                                        className='link'
-                                        variant="outlined"
-                                        href={APPLE_MUSIC_LINK}
-                                        target="_blank"
-                                        sx={{ ...musicButtonStyles, opacity: expandMusic ? 1 : 0 }}>
-                                        apple music
-                                    </Button>
-                                </div>
-                            </div>
-                        </Box>
-                    </Box>
-                </ThemeProvider>
-            </Grid>
+                                ...musicButtonStyles, 
+                                opacity: expandCode ? 1 : 0,
+                                pointerEvents: expandCode ? 'auto' : 'none'
+                            }}>
+                            olsynth
+                        </Button>
+                        <Button
+                            className='link'
+                            variant="outlined"
+                            target="_blank"
+                            onClick={() => window.open("https://github.com/eli0lson", "_blank")}
+                            sx={{ 
+                                ...musicButtonStyles, 
+                                opacity: expandCode ? 1 : 0,
+                                pointerEvents: expandCode ? 'auto' : 'none'
+                            }}>
+                            github
+                        </Button>
+                    </div>
+                </div>
+                <div className='links'>
+                    <div className='toggle'>
+                        <ToggleButton
+                            id='musicButton'
+                            expand={expandMusic}
+                            setExpand={setExpandMusic}
+                            label='my music'
+                        /> 
+                    </div>
+                    <div className='music-links'>
+                        <Button
+                            className='link'
+                            variant="outlined"
+                            href={SPOTIFY_LINK}
+                            target="_blank"
+                            sx={{ 
+                                ...musicButtonStyles, 
+                                opacity: expandMusic ? 1 : 0,
+                                pointerEvents: expandMusic ? 'auto' : 'none'
+                            }}>
+                            spotify
+                        </Button>
+                        <Button
+                            className='link'
+                            variant="outlined"
+                            href={APPLE_MUSIC_LINK}
+                            target="_blank"
+                            sx={{ 
+                                ...musicButtonStyles, 
+                                opacity: expandMusic ? 1 : 0,
+                                pointerEvents: expandMusic ? 'auto' : 'none'     
+                            }}>
+                            apple music
+                        </Button>
+                    </div>
+                </div>
+            </ThemeProvider>
         </div>
     )
 }
