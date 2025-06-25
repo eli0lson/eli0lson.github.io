@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import Header from './Components/header';
 import GridWrapper from './Components/gridWrapper.tsx';
 
+import { Analytics } from '@vercel/analytics/react';
+
 import './index.css';
 import './App.css';
 // import reportWebVitals from './src/reportWebVitals';
@@ -10,6 +12,7 @@ import './App.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Analytics />
     <Header />
     <GridWrapper />
   </React.StrictMode>
