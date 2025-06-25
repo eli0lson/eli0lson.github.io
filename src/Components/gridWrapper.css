@@ -31,14 +31,14 @@
 .middle {
     grid-column: 2 / 6;
     grid-row: 2 / 6;
+
+    min-width: 428px;
 }
 .buttons {
     display: flex;
     width: 100%;
     margin: -1.6rem 0;
 }
-
-
 
 .circle {
   background-color: rgb(231, 242, 255);
@@ -58,4 +58,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 1200px) {
+    .middle {
+        grid-row: 1 / 7
+    }
 }

@@ -25,7 +25,6 @@ const ToggleButton = (props: ToggleProps) => {
                 setExpand(!expand)
             }}
             id={id}>
-            <div className='cover'></div>
             <Button 
                 className={`toggleButton ${expand ? 'clicked' : ''}`}
                 variant="text"
@@ -34,6 +33,7 @@ const ToggleButton = (props: ToggleProps) => {
                 }}>
                 {label}
             </Button>
+            <div className='cover'></div>
         </div>
     );
 };

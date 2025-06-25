@@ -20,7 +20,10 @@
     border-color: rgb(181, 181, 181) !important;
     transition: border-color 0.05s !important;
 
-    /* border-radius: .1re !important; */
+    animation-fill-mode: forwards; 
+    -webkit-animation-fill-mode: forwards; 
+
+    border-radius: .1rem !important;
 }
 
 .toggleButton:active, .toggleButton.clicked:active {
@@ -46,9 +49,13 @@
 
     background-color: rgba(219, 205, 205, 0.8) !important;
     transition: background-color 0s !important;
+    
+    transition: padding .05s !important;
+    transition: font-size .05s !important;
 
-    /* transition: padding .05s !important; */
-    /* transition: font-size .05s !important; */
+    animation-fill-mode: forwards; 
+    -webkit-animation-fill-mode: forwards; 
+    
     text-decoration: none;
 }
 
@@ -84,4 +91,26 @@
 .buttonBack:active, .buttonBack.clicked {
     background-color: rgb(87, 87, 87);
     transition: background-color 0.06s !important;
+}
+
+@media only screen and (max-width: 1200px) {
+    .buttonBack, .buttonBack:active, .buttonBack.clicked {
+        background-color: rgb(122, 122, 122);
+        transition: none !important;
+    }
+
+    .toggleButton, .toggleButton:active, 
+    .toggleButton.clicked:active, .toggleButton.clicked {
+        background-color: rgba(219, 205, 205, 0.8) !important;
+        border-color: rgb(109, 109, 109) !important;
+        padding: 2rem .7rem !important;
+        font-size: 1.6rem !important;
+        transition: none !important;
+    }
+
+    .buttonBack.clicked {
+        .cover {
+            background-color: rgba(0, 0, 0, .3)
+        }
+    }
 }
